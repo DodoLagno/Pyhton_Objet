@@ -1,5 +1,3 @@
-# tp6redefinitionmethode.py
-
 class Livre:
     def __init__(self, titre, auteur):
         self._titre = titre
@@ -30,11 +28,9 @@ class Livre:
     def disponible(self, valeur):
         self._disponible = valeur
 
-    def afficher_infos(self):
+    def __repr__(self):
         disponibilite = "Oui" if self.disponible else "Non"
-        print(f"Titre: {self.titre}")
-        print(f"Auteur: {self.auteur}")
-        print(f"Disponible: {disponibilite}")
+        return f"Titre: {self.titre}, Auteur: {self.auteur}, Disponible: {disponibilite}"
 
 
 class LivrePapier(Livre):
@@ -50,9 +46,8 @@ class LivrePapier(Livre):
     def etat(self, nouveau_etat):
         self._etat = nouveau_etat
 
-    def afficher_infos(self):
-        super().afficher_infos()
-        print(f"État: {self.etat}")
+    def __repr__(self):
+        return super().__repr__() + f", État: {self.etat}"
 
 
 class LivreNumerique(Livre):
@@ -68,6 +63,5 @@ class LivreNumerique(Livre):
     def version(self, nouvelle_version):
         self._version = nouvelle_version
 
-    def afficher_infos(self):
-        super().afficher_infos()
-        print(f"Version: {self.version}")
+    def __repr__(self):
+        return super().__repr__() + f", Version: {self.version}"

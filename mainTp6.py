@@ -13,5 +13,5 @@ bibliotheque[0].disponible = True
 
 # Faire une boucle qui affiche les informations des divers livres
 for livre in bibliotheque:
-    livre.afficher_infos()
+    print(livre)
     print()
