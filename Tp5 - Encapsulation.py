@@ -1,4 +1,4 @@
-# encapsulation.py
+# Tp5 - Encapsulation.py
 
 class Livre:
     def __init__(self, titre, auteur):

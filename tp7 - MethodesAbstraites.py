@@ -1,4 +1,4 @@
-from tp6redefinitionmethode import LivrePapier, LivreNumerique
+from Tp6.tp6redefinitionmethode import LivrePapier, LivreNumerique
 
 
 # Classe abstraite Sortie

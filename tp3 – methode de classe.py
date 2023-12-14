@@ -26,14 +26,14 @@ class Zoo:
     @classmethod
     def afficher_animaux(cls):
         # Méthode de classe pour afficher les animaux du zoo
-        print("Animaux dans le Zoo:")
+        print("Animaux dans le ExerciceZoo:")
         for animal in cls.liste_animaux:
             print(f"{animal['espece']}: {animal['nombre']}")
 
-        print(f"Nombre total d'animaux dans le Zoo: {cls.nombre_total_animaux}")
+        print(f"Nombre total d'animaux dans le ExerciceZoo: {cls.nombre_total_animaux}")
 
 
-# Exemple d'utilisation du Zoo
+# Exemple d'utilisation du ExerciceZoo
 Zoo.ajouter_animaux("Lion", 3)
 Zoo.ajouter_animaux("Tigre", 2)
 Zoo.ajouter_animaux("Lion", 2)
