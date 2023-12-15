@@ -1,6 +1,5 @@
 from Adresse_Postale import AdressePostale
 
-
 class Personne:
     def __init__(self, nom, prenom, adresse):
         self._nom = nom
@@ -38,7 +37,13 @@ class Personne:
     def get_identite(self):
         return f"{self._prenom} {self._nom}"
 
+    def __eq__(self, other):
+        return isinstance(other, Personne) and self._nom == other._nom and self._prenom == other._prenom and self._adresse == other._adresse
 
+    def __hash__(self):
+        return hash((self._nom, self._prenom, self._adresse))
+
+# Reste du code inchangé
 # Créez une instance de AdressePostale
 adresse_personne = AdressePostale(numero_rue="Rue de la Paix", libelle_rue="Paris", code_postal="75001", ville="Paris")
 
@@ -56,4 +61,4 @@ une_personne.modifier_adresse(nouvelle_adresse_personne)
 print(une_personne)
 
 # Utilisez la nouvelle méthode get_identite
-print("Identite de la personne:", une_personne.get_identite())
+print("Identité de la personne:", une_personne.get_identite())
